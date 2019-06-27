@@ -1,0 +1,15 @@
+resources:
+- repo: self
+  fetchDepth: 15
+
+stages:
+- stage: Build_1
+  jobs:
+  - job: Job_1
+    displayName: Phase-1
+    condition: succeeded()
+    pool:
+      name: Default
+    steps:
+    - powershell: |
+        Write-Host "secret: asd"
