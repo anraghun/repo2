@@ -2,6 +2,9 @@ resources:
 - repo: self
   fetchDepth: 15
 
+variables:
+- group: a
+
 stages:
 - stage: Build_1
   jobs:
